@@ -9,7 +9,7 @@ namespace GildedRose.Tests
         private Item ProvideUpdatedItem(string name, int sellIn, int quality)
         {
             IList<Item> items = new List<Item> { new Item { Name = name, SellIn = sellIn, Quality = quality } };
-            var app = new Program() { Items = items };
+            var app = new GildedRoseApp() { Items = items };
             app.UpdateQuality();
             return items[0];
         }

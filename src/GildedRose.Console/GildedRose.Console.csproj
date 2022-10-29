@@ -45,6 +45,7 @@
     <Compile Include="AgedBrieUpdateLogic.cs" />
     <Compile Include="BackstageUpdateLogic.cs" />
     <Compile Include="GeneralUpdateLogic.cs" />
+    <Compile Include="GildedRoseApp.cs" />
     <Compile Include="IUpdateLogic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
