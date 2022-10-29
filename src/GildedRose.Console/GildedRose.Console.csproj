@@ -42,8 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgedBrieUpdateLogic.cs" />
+    <Compile Include="BackstageUpdateLogic.cs" />
+    <Compile Include="GeneralUpdateLogic.cs" />
+    <Compile Include="GildedRoseApp.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="ItemTypes.cs" />
+    <Compile Include="IUpdateLogic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SulfurasUpdateLogic.cs" />
+    <Compile Include="UpdateLogicFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
