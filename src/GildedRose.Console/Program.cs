@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace GildedRose.Console
 {
-    class Program
+    public class Program
     {
-        IList<Item> Items;
+        public IList<Item> Items;
+
+        [ExcludeFromCodeCoverage]
         static void Main(string[] args)
         {
             System.Console.WriteLine("OMGHAI!");
