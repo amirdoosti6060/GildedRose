@@ -3,7 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace GildedRose.Console
 {
-    public class Program
+    public partial class Program
     {
         [ExcludeFromCodeCoverage]
         static void Main(string[] args)
@@ -31,14 +31,4 @@ namespace GildedRose.Console
             System.Console.ReadKey();
         }
     }
-
-    public class Item
-    {
-        public string Name { get; set; }
-
-        public int SellIn { get; set; }
-
-        public int Quality { get; set; }
-    }
-
 }

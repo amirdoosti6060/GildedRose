@@ -10,11 +10,11 @@ namespace GildedRose.Console
     {
         public IUpdateLogic Create(Item item)
         {
-            if (item.Name == "Aged Brie")
+            if (item.Name == ItemTypes.Aged_Brie)
                 return new AgedBrieUpdateLogic();
-            else if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
+            else if (item.Name == ItemTypes.Backstage)
                 return new BackstageUpdateLogic();
-            else if (item.Name == "Sulfuras, Hand of Ragnaros")
+            else if (item.Name == ItemTypes.Sulfuras)
                 return new SulfurasUpdateLogic();
             else
                 return new GeneralUpdateLogic();
