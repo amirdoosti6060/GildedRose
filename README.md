@@ -51,10 +51,11 @@ Quality is 80 and it never alters.
 3- Implement unit tests and check current functionality with business rules
 4- Coverage code test and make sure it is good enough
 5- Refactoring
-6- Test again based on available unit tests and coverage code test
-7- Add new feature (New item type)
-8- Add unit tests for new feature
-9- Final unit tests and coverage code test
+	a. Implement Object Oriented approach
+	b. Define GuildedRoseApp class use it
+	c. Define constants and finilize refactoring
+6- Add new feature (New item type)
+7- Final unit tests and coverage code test
 10- Finalize readme file
 
 ## License
