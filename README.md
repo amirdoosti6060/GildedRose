@@ -44,18 +44,18 @@ Just for clarification, an item can never have its Quality increase
 above 50, however "Sulfuras" is a legendary item and as such its 
 Quality is 80 and it never alters.
 
-## Getting Started
+## Refactoring Steps
 
-Clone the repository. Run build.bat from Powershell. If you see 
-output similar to the following screenshot, you are ready to 
-start refactoring.
-
-![alt text](images/build_output.png "Good Build Output")
-
-## Who, What, Why?
-Who: [@TerryHughes](https://twitter.com/TerryHughes), [@NotMyself](https://twitter.com/NotMyself)
-
-What & Why: [Refactor This: The Gilded Rose Kata](http://iamnotmyself.com/2011/02/13/refactor-this-the-gilded-rose-kata/)
+1- Clone original projects and initiate new git repository
+2- Prepare projects by converting them to .Net Framework 4.8 and update packages
+3- Implement unit tests and check current functionality with business rules
+4- Coverage code test and make sure it is good enough
+5- Refactoring
+6- Test again based on available unit tests and coverage code test
+7- Add new feature (New item type)
+8- Add unit tests for new feature
+9- Final unit tests and coverage code test
+10- Finalize readme file
 
 ## License
 
