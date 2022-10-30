@@ -44,27 +44,58 @@ Just for clarification, an item can never have its Quality increase
 above 50, however "Sulfuras" is a legendary item and as such its 
 Quality is 80 and it never alters.
 
-## Refactoring Steps
+## Developement Environment
+Here is my developement environment and packages specification used for this project:
+- Windows 10 Enterprise - 64 bits
+- Visual Studio Enterprise 2022 (64 bits) - version 17.2.5
+- Microsoft .NET Framework 4.8 (4.8.04084)
+- Installed Packages:
+	- GitVersionTask (5.5.1)
+	- xunit (2.4.2)
+	- xunit.abstractions (2.0.3)
+	- xunit.analizers (1.0.0)
+	- xunit.assert (2.4.2)
+	- xunit.core (2.4.2)
+	- xunit.extensibility.core (2.4.2)
+	- xunit.extensibility.execution (2.4.2)
+	- xunit.runner.visualstudio (2.4.5)
 
-1- Clone original projects and initiate new git repository
-2- Prepare projects by converting them to .Net Framework 4.8 and update packages
-3- Implement unit tests and check current functionality with business rules
-4- Coverage code test and make sure it is good enough
-5- Refactoring
-	a. Implement Object Oriented approach
-	b. Define GuildedRoseApp class use it
-	c. Define constants and finilize refactoring
-6- Add new feature (New item type)
-	a. Add new product (Conjured)
-	b. Add more unit tests and provide more test data
-7- Bug fix and code improvements
-8- Execute code coverage test and unit tests again
+## How to run
+1. Open the solution in appropriate Visual Studio
+2. Run GildedRose.Console application simply by click on "Start" button. Just to be sure program run without problem
+3. Open TestAssemblyTests.cs and Open "Test Explorer" and then click on "Run All Tests in View". All test should pass
+4. From Test menu, execute "Analyze code coverage for all tests". Coverage for both project should be 100%
+
+## Refactoring Steps
+1. Clone original projects and initiate new git repository  
+2. Prepare projects by converting them to .Net Framework 4.8 and update packages  
+3. Implement unit tests and check current functionality with business rules  
+4. Coverage code test and make sure it is good enough  
+5. Refactoring 
+	1. Implement Object Oriented approach  
+	2. Define GuildedRoseApp class use it  
+	3. Define constants and finilize refactoring  
+6. Add new feature (New item type) 
+	1. Add new product (Conjured)  
+	2. Add more unit tests and provide more test data  
+7. Bug fix and code improvements  
+8. Execute code coverage test and unit tests again  
+9. Complete README.md
+
+## Branching Strategy
+For this project the following branching strategy is followed:
+1. Keep master update as a main branch
+2. For each major changes a new branch is created
+3. After the change is done, the branch is merged to master
+4. On master, only README.md file and minor changes is done
 
 ## License
 
 MIT
 
 ## Suggested attribution
+
+This exersize is implemented by **Amir Doosti** <amirdoosti@gmail.com>
 
 This work is by [@TerryHughes](https://twitter.com/TerryHughes), [@NotMyself](https://twitter.com/NotMyself)
 
