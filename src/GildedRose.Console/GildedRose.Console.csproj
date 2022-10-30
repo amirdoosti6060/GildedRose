@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="AgedBrieUpdateLogic.cs" />
     <Compile Include="BackstageUpdateLogic.cs" />
+    <Compile Include="ConjuredUpdateLogic.cs" />
     <Compile Include="GeneralUpdateLogic.cs" />
     <Compile Include="GildedRoseApp.cs" />
     <Compile Include="Item.cs" />
