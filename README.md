@@ -58,6 +58,7 @@ Quality is 80 and it never alters.
 	a. Add new product (Conjured)
 	b. Add more unit tests and provide more test data
 7- Bug fix and code improvements
+8- Execute code coverage test and unit tests again
 
 ## License
 
