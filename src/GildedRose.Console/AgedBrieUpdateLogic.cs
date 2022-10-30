@@ -10,16 +10,12 @@ namespace GildedRose.Console
     {
         public void Update(Item item)
         {
-            if (item.Quality < 50)
-                item.Quality += 1;
+            item.Quality = Helper.IncreaseQuality(item.Quality, 1);
 
             item.SellIn -= 1;
 
             if (item.SellIn < 0)
-            {
-                if (item.Quality < 50)
-                    item.Quality += 1;
-            }
+                item.Quality = Helper.IncreaseQuality(item.Quality, 1);
         }
     }
 }
