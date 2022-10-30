@@ -16,19 +16,23 @@ namespace GildedRose.Tests
 
         [Theory]
         [InlineData(15, 20)]
+        [InlineData(15, 0)]
         public void UpdateQuality_GeneralRule_EndOfTheDayLowerSellInAndQuality(int sellIn, int quality)
         {
             Item item = ProvideUpdatedItem("AnyItem", sellIn, quality);
             Assert.Equal(sellIn - 1, item.SellIn);
             Assert.Equal(quality - 1, item.Quality);
+            Assert.InRange<int>(quality, 0, GildedRoseApp.MAX_QUALITY);
         }
 
         [Theory]
         [InlineData(0, 20)]
+        [InlineData(0, 1)]
         public void UpdateQuality_GeneralRule_SellDatePassedQualityDegradesTwiceAsFast(int sellIn, int quality)
         {
             Item item = ProvideUpdatedItem("AnyItem", sellIn, quality);
             Assert.Equal(quality - 2, item.Quality);
+            Assert.InRange<int>(quality, 0, GildedRoseApp.MAX_QUALITY);
         }
 
         [Theory]
@@ -41,18 +45,22 @@ namespace GildedRose.Tests
 
         [Theory]
         [InlineData(15, 20)]
+        [InlineData(15, 50)]
         public void UpdateQuality_SpecificRule_AgedBrieIncreasesQuality(int sellIn, int quality)
         {
             Item item = ProvideUpdatedItem(ItemTypes.Aged_Brie, sellIn, quality);
             Assert.Equal(quality + 1, item.Quality);
+            Assert.InRange<int>(quality, 0, GildedRoseApp.MAX_QUALITY);
         }
 
         [Theory]
         [InlineData(-5, 20)]
+        [InlineData(-5, 49)]
         public void UpdateQuality_SpecificRule_AgedBrieDatePassedQualityStillIncrease(int sellIn, int quality)
         {
             Item item = ProvideUpdatedItem(ItemTypes.Aged_Brie, sellIn, quality);
             Assert.Equal(quality + 2, item.Quality);
+            Assert.InRange<int>(quality, 0, GildedRoseApp.MAX_QUALITY);
         }
 
         [Theory]
@@ -74,26 +82,32 @@ namespace GildedRose.Tests
 
         [Theory]
         [InlineData(15, 20)]
+        [InlineData(15, 50)]
         public void UpdateQuality_SpecificRule_BackstageQualityIncrease(int sellIn, int quality)
         {
             Item item = ProvideUpdatedItem(ItemTypes.Backstage, sellIn, quality);
             Assert.Equal(quality + 1, item.Quality);
+            Assert.InRange<int>(quality, 0, GildedRoseApp.MAX_QUALITY);
         }
 
         [Theory]
         [InlineData(GildedRoseApp.BACKSTAGE_DAY_STEP1, 20)]
+        [InlineData(GildedRoseApp.BACKSTAGE_DAY_STEP1, 49)]
         public void UpdateQuality_SpecificRule_BackstageQualityIncrease2When10DaysOrLess(int sellIn, int quality)
         {
             Item item = ProvideUpdatedItem(ItemTypes.Backstage, sellIn, quality);
             Assert.Equal(quality + 2, item.Quality);
+            Assert.InRange<int>(quality, 0, GildedRoseApp.MAX_QUALITY);
         }
 
         [Theory]
         [InlineData(GildedRoseApp.BACKSTAGE_DAY_STEP2, 20)]
+        [InlineData(GildedRoseApp.BACKSTAGE_DAY_STEP2, 49)]
         public void UpdateQuality_SpecificRule_BackstageQualityIncrease3When5DaysOrLess(int sellIn, int quality)
         {
             Item item = ProvideUpdatedItem(ItemTypes.Backstage, sellIn, quality);
             Assert.Equal(quality + 3, item.Quality);
+            Assert.InRange<int>(quality, 0, GildedRoseApp.MAX_QUALITY);
         }
 
         [Theory]
@@ -102,15 +116,18 @@ namespace GildedRose.Tests
         {
             Item item = ProvideUpdatedItem(ItemTypes.Backstage, sellIn, quality);
             Assert.Equal(0, item.Quality);
+            Assert.InRange<int>(quality, 0, GildedRoseApp.MAX_QUALITY);
         }
 
         [Theory]
         [InlineData(15, 20)]
+        [InlineData(-1, 3)]
         public void UpdateQuality_SpecificRule_ConjuredQualityDegradeTwiceFast(int sellIn, int quality)
         {
             Item item = ProvideUpdatedItem(ItemTypes.Conjured, sellIn, quality);
             Assert.Equal(sellIn - 1, item.SellIn);
             Assert.Equal(quality - 2, item.Quality);
+            Assert.InRange<int>(quality, 0, GildedRoseApp.MAX_QUALITY);
         }
     }
 }
