@@ -47,6 +47,7 @@
     <Compile Include="ConjuredUpdateLogic.cs" />
     <Compile Include="GeneralUpdateLogic.cs" />
     <Compile Include="GildedRoseApp.cs" />
+    <Compile Include="Helper.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ItemTypes.cs" />
     <Compile Include="IUpdateLogic.cs" />
