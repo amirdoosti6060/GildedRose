@@ -103,5 +103,14 @@ namespace GildedRose.Tests
             Item item = ProvideUpdatedItem(ItemTypes.Backstage, sellIn, quality);
             Assert.Equal(0, item.Quality);
         }
+
+        [Theory]
+        [InlineData(15, 20)]
+        public void UpdateQuality_SpecificRule_ConjuredQualityDegradeTwiceFast(int sellIn, int quality)
+        {
+            Item item = ProvideUpdatedItem(ItemTypes.Conjured, sellIn, quality);
+            Assert.Equal(sellIn - 1, item.SellIn);
+            Assert.Equal(quality - 2, item.Quality);
+        }
     }
 }
