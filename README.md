@@ -55,8 +55,9 @@ Quality is 80 and it never alters.
 	b. Define GuildedRoseApp class use it
 	c. Define constants and finilize refactoring
 6- Add new feature (New item type)
-7- Final unit tests and coverage code test
-10- Finalize readme file
+	a. Add new product (Conjured)
+	b. Add more unit tests and provide more test data
+7- Bug fix and code improvements
 
 ## License
 
