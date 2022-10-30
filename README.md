@@ -73,7 +73,7 @@ Here is my developement environment and packages specification used for this pro
 4. Coverage code test and make sure it is good enough  
 5. Refactoring 
 	1. Implement Object Oriented approach  
-	2. Define GuildedRoseApp class use it  
+	2. Define GuildedRoseApp class and use it  
 	3. Define constants and finilize refactoring  
 6. Add new feature (New item type) 
 	1. Add new product (Conjured)  
@@ -95,7 +95,7 @@ MIT
 
 ## Suggested attribution
 
-This exersize is implemented by **Amir Doosti** <amirdoosti@gmail.com>
+This exercise is implemented by **Amir Doosti** <amirdoosti@gmail.com>
 
 This work is by [@TerryHughes](https://twitter.com/TerryHughes), [@NotMyself](https://twitter.com/NotMyself)
 
