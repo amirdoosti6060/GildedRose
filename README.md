@@ -97,6 +97,6 @@ MIT
 
 This exercise is implemented by **Amir Doosti** <amirdoosti@gmail.com>
 
-This work is by [@TerryHughes](https://twitter.com/TerryHughes), [@NotMyself](https://twitter.com/NotMyself)
+This exersise is designed by [@TerryHughes](https://twitter.com/TerryHughes), [@NotMyself](https://twitter.com/NotMyself)
 
-The repository can be found at [https://github.com/NotMyself/GildedRose](https://github.com/NotMyself/GildedRose)
+The original repository can be found at [https://github.com/NotMyself/GildedRose](https://github.com/NotMyself/GildedRose)
